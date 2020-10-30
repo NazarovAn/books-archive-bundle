@@ -4,9 +4,31 @@
 }
 
 .page {
-  padding-top: 40px;
+  width: 80%;
+  margin: auto;
+  padding: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page__books,
+.page__opened-book,
+.page__books-form {
+  padding: 0 10px;
+}
+
+.page__books-form {
+  width: 15%;
+}
+
+.page__books {
+  width: 30%;
+}
+
+.page__opened-book {
+  width: 50%;
 }
 
 .books-form__radio-buttons {
@@ -20,12 +42,20 @@
 }
 
 .typed-text__name,
-.typed-text__textarea {
-  padding: 5px 10px;
+.typed-text__textarea,
+.typed-text__button,
+.load-file__button {
+  padding: .5rem 1rem;
+  font-family: inherit;
 }
 
 .typed-text__textarea {
   resize: none;
+}
+
+.typed-text__button,
+.load-file__button {
+  font-weight: bold;
 }
 
 .favorites__list,
@@ -33,6 +63,104 @@
   list-style: none;
 }
 
+.books-list__item,
+.books__heading,
+.books__drop-area {
+  padding: .5rem 1rem;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.books__heading {
+  background-color: rgb(73, 73, 73);
+  font-size: 1.1rem;
+}
+
+.books-list__item,
+.books__drop-area {
+  background-color: rgb(173, 173, 173);
+  color: black;
+}
+
+.books__drop-area {
+  min-height: 100px;
+  position: relative;
+}
+
+.drop-area__heading {
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 50px);
+  color: rgba(0,0,0,0.3)
+}
+
+.edit-book-btn,
+.read-book-btn,
+.finished-book-btn,
+.delete-book-btn,
+.like-book-btn {
+  float: right;
+  padding: 2px 4px;
+}
+
+.opened-book__title,
+.opened-book__text {
+  padding: .5rem 1rem;
+}
+
+.list-book__title {
+  pointer-events: none;
+}
+
+.page__edit-form {
+  position: absolute;
+  width: 60%;
+  min-height: 400px;
+  margin: auto;
+  background-color: rgb(209, 209, 209);
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 2rem;
+}
+
+.edit-form__input,
+.edit-form__textarea,
+.edit-form__save-btn {
+  padding: .5rem 1rem;
+}
+
+.edit-form__input,
+.edit-form__textarea {
+  margin-bottom: .5rem;
+}
+
+.edit-form__textarea {
+  width: calc(100% - 2rem);
+  min-height: 250px;
+  resize: none;
+}
+
+.edit-form__save-btn {
+  float: right;
+}
+
+.liked {
+  background-color: burlywood;
+}
+
+.read {
+  opacity: 0.5;
+}
+
+.draged {
+  position: absolute;
+  z-index: 10;
+  opacity: 0.2;
+  width: 22%;
+  pointer-events: none;
+}
+
 .hidden {
   display: none;
 }
+
